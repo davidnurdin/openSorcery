@@ -1,0 +1,13 @@
+# build outputs
+sorcery-emu
+sorcery-emu-headless
+sorcery-native
+sorcery-native-headless
+make_resources
+zex
+*.bin.tmp
+tools/audio_export.bin
+# saved by the game
+resources/halloffame.sav
+sorcery_shot.png
+__pycache__/

@@ -1,0 +1,40 @@
+; Sorcery+ room 53
+; map: 40 x 18 tiles, hex tile ids (tile id = row*16+column of the tile sheets in graphics/tiles1.png / tiles2.png), '..' = 00 = empty.
+; The tile classes used by the game: ids 00 and above DC = empty, 1E/1F, 46/47, 6E/6F = animated hazards, all other ids are solid.
+room 53
+map
+d0 d1 cc cf 31 31 31 d1 30 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 32 82 84 33 35 34
+7d 7d 7d 7d 7d 7d 7d 7d 7d 7f .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 5e 5f 5b 5c d2 83
+2f 2e 46 47 2f 2e 2f 2e 2f 2e 7e .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+2e 2f 2e 7c 7b 2f 2e 2f 2e 2f 7f .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+a6 ce a6 ce a6 ce a6 ce a6 ce a7 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+ce cd ce cd ce cd ce cd ce a7 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+cd cd cd cd cd cd cd cd cd .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+cd cd cd cd cd cd cd cd cd .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+cd cd cd cd cd cd cd cd cd .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 01 02 18 17
+cd cd cd cd cd cd cd cd cd .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. e7 e8 e9 e8
+a3 a2 a3 a2 a3 cd cd cd cd .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+cb ca cb ca cb cd cd cd cd .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+ce cd ce cd cd cd cd cd cd .. .. .. .. .. .. .. .. .. .. .. fa .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
+79 79 79 79 79 79 79 79 79 51 06 fb .. .. .. .. .. .. .. 01 02 03 04 05 04 03 04 .. .. .. 04 05 03 04 04 18 17 19 1a 1b
+79 79 79 79 79 79 79 79 79 79 18 02 03 .. .. .. 03 06 01 02 e8 e9 ea e8 e9 e9 e8 e9 e8 e9 e8 e9 ea e8 e9 e8 ea e7 e8 e9
+79 79 79 79 79 79 79 79 79 79 51 1b 19 .. .. .. 19 8f .. 90 .. f9 .. .. f8 fd .. .. .. .. .. f8 .. .. fe .. .. .. .. ..
+79 79 79 79 79 79 79 79 79 51 19 1b 02 1a 1b 19 1b .. .. .. .. .. .. .. f9 .. .. .. .. .. .. f9 .. .. .. .. .. .. 6e 6f
+79 79 79 79 79 79 79 51 1b 18 1b 17 1b 19 02 bc 19 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 01 18 19 02
+end
+; room record: 64 bytes in hex, grouped by field (the text after ';' is only a note)
+record
+00: 17 ff                                 ; text number of the room name (line 1 of the status area), ?
+02: 01 78 50 00 00 18 ff ff ff 00         ; entity 1: state (FF = none), y, x, frame, ... - the 2 permanent entities of the room
+0c: 03 00 50 0c 00 18 ff ff ff 00         ; entity 2
+16: 00 28 2f c0                           ; door in the left wall 1: y, x, destination room, flags (bits 0-5 lock type 0-6, bit 6/7 = which door/side at the destination)
+1a: 78 44 36 80                           ; door in the left wall 2
+1e: ff ff ff ff                           ; door in the right wall 1
+22: 50 94 3f 40                           ; door in the right wall 2
+26: ff ff ff                              ; object A: y, x, ? (FF = none)
+29: 68 34 0a                              ; object B
+2c: ff ff ff                              ; object C
+2f: 58 6c 45                              ; object D
+32: ff ff                                 ; pickup: y (FF = none), x
+34: 58 38 2c 28 90 2b ff ff ff ff ff ff   ; other room data (not yet understood)
+end
